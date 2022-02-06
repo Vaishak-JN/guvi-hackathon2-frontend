@@ -10,7 +10,7 @@ export function Product({ name, type, image, price, _id }) {
                     <AddShoppingCartIcon color="primary" />
                 </IconButton>
             </h1>
-            <h2>Price: {price}/day</h2>
+            <h2>Rent: ₹ {price}/day</h2>
         </div>
     );
 }
