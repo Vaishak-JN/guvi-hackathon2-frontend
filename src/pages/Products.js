@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { Context } from "../Context";
 import { API } from "../global";
 import { Product } from "./Product";
 
@@ -8,21 +9,21 @@ import { Product } from "./Product";
 export function Products() {
 
 
-  const [products, setProducts] = useState([])
+  // const [products, setProducts] = useState([])
 
-  useEffect(() => {
-    fetch("https://vrentalapp.herokuapp.com/products", {
-      method: "GET"
-    })
-      .then(res => res.json())
-      .then(data => {
-        setProducts(data)
-        // console.log(products)
-        // console.log(data)
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch("https://vrentalapp.herokuapp.com/products", {
+  //     method: "GET"
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setProducts(data)
+  //       // console.log(products)
+  //       // console.log(data)
+  //     })
+  // }, [])
 
-
+  const { products } = useContext(Context)
   // console.log(products)
   return (
     <div className="products">

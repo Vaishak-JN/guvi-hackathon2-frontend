@@ -2,7 +2,7 @@ import './App.css';
 import { Switch, Route, Link, Redirect } from 'react-router-dom';
 import { Login } from './pages/Login';
 import { Home } from './pages/Home';
-import { Register } from './pages/Register';
+import { Signup } from './pages/signup';
 import { Booking } from './pages/Booking';
 import { Header } from './pages/Header';
 import { BrowserRouter, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
@@ -13,27 +13,27 @@ function App() {
   return (
     <div className="App">
 
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/products">
-            <Products />
-          </Route>
-          <Route exact path="/register">
-            <Register />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/cart">
-            <Cart />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/products">
+          <Products />
+        </Route>
+        <Route exact path="/signup">
+          <Signup />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/cart">
+          <Cart />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+      </Switch>
     </div>
   );
 }

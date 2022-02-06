@@ -65,3 +65,9 @@ nav {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.signup {
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px 0;
+}
