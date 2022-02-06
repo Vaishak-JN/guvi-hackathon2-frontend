@@ -7,8 +7,19 @@ export function Signup() {
   const [password, setPassword] = useState("")
 
   const history = useHistory()
+
   function handleSubmit() {
-    history.push("/")
+    const newUser = {
+      "username": name,
+      "password": password
+    }
+    fetch(`https://vrentalapp.herokuapp.com/user/signup`, {
+      method: "POST",
+      body: JSON.stringify(newUser),
+      headers: { "Content-type": "application/json" }
+    })
+      .then(() => history.push("/user/login"))
+    // history.push("/")
   }
 
   return (

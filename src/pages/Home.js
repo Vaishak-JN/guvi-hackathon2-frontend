@@ -8,9 +8,9 @@ export function Home() {
       <h1>You need it</h1>
       <h1>We rent it</h1>
       <p>We are an online platform providing rental services.</p>
-      <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/signup")} >Sign-up</Button>
-      <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/login")} >Login</Button>
-      <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/products")} >Products</Button>
+      <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/user/signup")} >Sign-up</Button>
+      <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/user/login")} >Login</Button>
+      <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/userproducts")} >Products</Button>
     </div>
   );
 }

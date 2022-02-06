@@ -21,10 +21,10 @@ function App() {
         <Route exact path="/products">
           <Products />
         </Route>
-        <Route exact path="/signup">
+        <Route exact path="/user/signup">
           <Signup />
         </Route>
-        <Route exact path="/login">
+        <Route exact path="/user/login">
           <Login />
         </Route>
         <Route exact path="/cart">
