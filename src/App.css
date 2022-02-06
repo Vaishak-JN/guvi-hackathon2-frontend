@@ -39,3 +39,29 @@ nav {
 .home-page p {
   font-size: 60px;
 }
+
+.products {
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.product-card {
+  width: 400px;
+  /* border: 1px solid red; */
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  overflow: hidden;
+}
+.product-img {
+  /* height: 400px; */
+  object-fit: cover;
+  object-position: center;
+  height: 300px;
+}
+.product-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
