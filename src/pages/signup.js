@@ -13,7 +13,7 @@ export function Signup() {
       "username": name,
       "password": password
     }
-    fetch(`https://vrentalapp.herokuapp.com/user/signup`, {
+    fetch(`http://localhost:9000/user/signup`, {
       method: "POST",
       body: JSON.stringify(newUser),
       headers: { "Content-type": "application/json" }

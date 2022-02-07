@@ -5,6 +5,7 @@ export function Login() {
 
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
+  const [p, setP] = useState({})
 
   const history = useHistory()
 
@@ -13,13 +14,14 @@ export function Login() {
       "username": name,
       "password": password
     }
-    fetch(`https://vrentalapp.herokuapp.com/user/login`, {
+    fetch("http://localhost:9000/user/login", {
       method: "POST",
       body: JSON.stringify(newUser),
       headers: { "Content-type": "application/json" }
     })
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => localStorage.setItem("token", data.token))
+      .then(() => history.push("/"))
     // history.push("/")
   }
 
@@ -35,6 +37,8 @@ export function Login() {
       <br />
       <br />
       <button onClick={handleSubmit}>Submit</button>
+      <br />
+      <p>{p.token}</p>
 
     </div>
   );
