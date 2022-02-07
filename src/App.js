@@ -21,12 +21,12 @@ function App() {
         <Route exact path="/products">
           <Products />
         </Route>
-        {/* <Route exact path="/user/signup">
+        <Route exact path="/user/signup">
           <Signup />
         </Route>
         <Route exact path="/user/login">
           <Login />
-        </Route> */}
+        </Route>
         <Route exact path="/cart">
           <Cart />
         </Route>
