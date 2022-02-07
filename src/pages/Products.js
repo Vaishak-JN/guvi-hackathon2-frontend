@@ -13,7 +13,7 @@ export function Products() {
   const [token, setToken] = useState(localStorage.getItem("token"))
 
   useEffect(() => {
-    fetch("http://localhost:9000/products", {
+    fetch("https://vrentalapp.herokuapp.com/products", {
       method: "GET",
       headers: { "x-auth-token": token }
     })

@@ -14,7 +14,7 @@ export function Login() {
       "username": name,
       "password": password
     }
-    fetch("http://localhost:9000/user/login", {
+    fetch("https://vrentalapp.herokuapp.com/user/login", {
       method: "POST",
       body: JSON.stringify(newUser),
       headers: { "Content-type": "application/json" }
