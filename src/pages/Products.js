@@ -11,14 +11,17 @@ export function Products() {
 
   const [products, setProducts] = useState([])
   const [token, setToken] = useState(localStorage.getItem("token"))
+  const [show, setShow] = useState(false)
+
 
   useEffect(() => {
-    fetch("https://vrentalapp.herokuapp.com/products", {
+    fetch(`${API}/products`, {
       method: "GET",
       headers: { "x-auth-token": token }
     })
       .then(res => res.json())
       .then(data => setProducts(data))
+      .then(() => setShow(true))
   }, [])
 
   // const { products } = useContext(Context)
@@ -27,7 +30,7 @@ export function Products() {
     <div className="products">
       <h1>Products</h1>
       <div className="product-container">
-        {products.map(({ name, type, image, price, _id }, index) => <Product key={index} type={type} image={image} name={name} price={price} id={_id} />)}
+        {show && products.map(({ name, type, image, price, _id }, index) => <Product key={index} type={type} image={image} name={name} price={price} id={_id} />)}
       </div>
     </div>
   );

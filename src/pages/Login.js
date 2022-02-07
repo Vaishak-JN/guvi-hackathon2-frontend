@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
+import { API } from "../global";
 
 export function Login() {
 
@@ -14,7 +15,7 @@ export function Login() {
       "username": name,
       "password": password
     }
-    fetch("https://vrentalapp.herokuapp.com/user/login", {
+    fetch(`${API}/user/login`, {
       method: "POST",
       body: JSON.stringify(newUser),
       headers: { "Content-type": "application/json" }
