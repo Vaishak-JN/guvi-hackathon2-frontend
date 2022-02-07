@@ -10,7 +10,7 @@ export function Home() {
       <p>We are an online platform providing rental services.</p>
       <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/user/signup")} >Sign-up</Button>
       <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/user/login")} >Login</Button>
-      <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/userproducts")} >Products</Button>
+      <Button margin="normal" style={{ margin: "0 10px 0 0" }} variant="contained" onClick={() => history.push("/products")} >Products</Button>
     </div>
   );
 }
